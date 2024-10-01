@@ -1,0 +1,222 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Нещадим Игорь\Пример\bin\Debug\Пример.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdre0, Thread: 0x2E04 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Нещадим Игорь\Пример\main.cpp:34:
+
+     32: 
+     33: 
+=>   34:     txTextCursor (false);
+     35:     return 0;
+     36:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 10 2024 18:11:26, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 10 2024 18:11:33
+
+Run file:	C:\Нещадим Игорь\Пример\bin\Debug\Пример.exe
+Directory:	C:\Нещадим Игорь\Пример
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Нещадим Игорь\Пример\bin\Debug\Пример.exe, файл: c:\ded32\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdre0, Thread: 0x3EF0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\ded32\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\ded32\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\ded32\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\ded32\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Нещадим Игорь\Пример\main.cpp:244:
+
+    242: 
+    243: 
+=>  244:     txTextCursor (false);
+    245:     return 0;
+    246:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\ded32\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2024 21:38:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2024 21:38:14
+
+Run file:	C:\Нещадим Игорь\Пример\bin\Debug\Пример.exe
+Directory:	C:\Нещадим Игорь\Пример
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Нещадим Игорь\Пример\bin\Debug\Пример.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdre0, Thread: 0x152C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at D:\Нещадим Игорь\Пример\main.cpp:322:
+
+    320: 
+    321: 
+=>  322:     txTextCursor (false);
+    323:     return 0;
+    324:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 26 2024 17:34:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 26 2024 17:35:52
+
+Run file:	D:\Нещадим Игорь\Пример\bin\Debug\Пример.exe
+Directory:	D:\Нещадим Игорь\Пример
+
+--------------------------------------------------
